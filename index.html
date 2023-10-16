@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marla to SquareFeet</title>
+</head>
+<body>
+    <h1>Marla to SquareFeet</h1><br>
+    <form onsubmit="convert(event)">
+        Enter the Area in Marla: <input type="number" id="marla" required step="0.1"><br>
+        <button>Convert</button>
+    </form>
+    <h1 id="resultWindow"></h1>
+
+    <script>
+        function convert(event){
+            event.preventDefault();
+
+            let AreaInMarla = document.querySelector("#marla").value;
+            console.log(AreaInMarla);
+
+            let AreaInSquareFeet = Number(AreaInMarla) * 272.3;
+
+            document.querySelector("#resultWindow").innerHTML = AreaInSquareFeet;
+        }
+    </script>
+</body>
+</html>
